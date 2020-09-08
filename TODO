@@ -1,0 +1,5 @@
+1- Login to Twitter Page via User and Password 
+2- Save the user and password then add them to cookie manager via pickle
+3- load 1000 twitts and is they are above 150 likes add to excel.
+4 - tweet link is needed.
+5- then send all to telegram via API.

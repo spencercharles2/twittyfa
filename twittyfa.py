@@ -30,7 +30,7 @@ class twittyfa:
             print('Cookies Has been Imported.')
             
             self.browser.refresh()
-            sleep(60)
+            
 
 
 
@@ -55,14 +55,22 @@ class twittyfa:
             print('Cookies has been dumped!')
             cookiefile.close()
 
+    def get_timeline_text(self):
+        self.browser.refresh()
+        print('Waiting to timeline gets load...')
+        sleep(3)
 
-
+        for tweet in range(1,100):
+            tweets_text = self.browser.find_element_by_xpath('/html/body/div/div/div/div[2]/main/div/div/div/div/div/div[4]/div/div/section/div/div/div[{}]/div/div/article/div/div/div/div[2]/div[2]/div[2]/div[1]/div/span'.format(tweet))
+            print(tweets_text)
+        
+        
 
 ### یوزرنیم و پسورد را از کاربر دریافت کن
 bot = twittyfa('WorstPlayer32@gmail.com','TFItt3RJfeNm*s9XPrEqgL^7q')
 bot.twitter_login()
 
-bot.
+bot.get_timeline_text()
 
 
 # actionChain.key_down(Keys.SPACE).key_up(Keys.SPACE).perform()
